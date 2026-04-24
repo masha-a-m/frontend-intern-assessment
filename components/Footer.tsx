@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Linkedin, Instagram, Twitter, Mail, Phone } from "lucide-react";
+import { Phone } from "lucide-react";
 
 export default function Footer() {
   return (
