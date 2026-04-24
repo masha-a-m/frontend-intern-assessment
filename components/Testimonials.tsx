@@ -50,16 +50,19 @@ export default function Testimonials() {
         </h2>
         
       <div className="relative overflow-hidden">
-  {/* Container with max-width to show partial card */}
-  <div className="overflow-visible">
+  <div className="overflow-visible md:overflow-hidden">
     <div 
       className="flex gap-6 transition-transform duration-300 ease-out"
-      style={{ transform: `translateX(-${scrollPosition}px)` }}
+      style={{ 
+        transform: `translateX(-${scrollPosition}px)`,
+        // On desktop, show partial next card
+        marginRight: '-10%'
+      }}
     >
       {testimonials.map((testimonial, idx) => (
         <div
           key={idx}
-          className="w-[85vw] sm:w-[320px] md:w-[350px] lg:w-[370px] xl:w-[400px] bg-white border-l-4 border-[#EF4353] rounded-2xl p-6 flex-shrink-0"
+          className="w-[85vw] sm:w-[300px] md:w-[350px] lg:w-[400px] xl:w-[420px] bg-white border-l-4 border-[#EF4353] rounded-2xl p-6 flex-shrink-0"
         >
           {/* Card content */}
           <div className="flex items-center gap-4 mb-4">
@@ -89,18 +92,16 @@ export default function Testimonials() {
   </div>
   
   {/* Navigation Buttons */}
-  <div className="flex justify-end gap-3 mt-8 mr-4 md:mr-0">
+  <div className="flex justify-end gap-3 mt-8">
     <button
       onClick={prevTestimonial}
       className="w-8 h-8 bg-[#F043541A] rounded-lg flex items-center justify-center hover:bg-[#F0435433] transition-colors"
-      aria-label="Previous testimonial"
     >
       <ChevronLeft size={20} className="text-[#EF4353]" />
     </button>
     <button
       onClick={nextTestimonial}
       className="w-8 h-8 bg-[#F043541A] rounded-lg flex items-center justify-center hover:bg-[#F0435433] transition-colors"
-      aria-label="Next testimonial"
     >
       <ChevronRight size={20} className="text-[#EF4353]" />
     </button>
