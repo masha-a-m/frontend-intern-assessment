@@ -4,7 +4,7 @@ A pixel-perfect, fully responsive Next.js implementation of the Tobams Group web
 
 ## Live URL
 
-[View Live Deployment](https://tobamfrontendassessment.vercel.app)
+[View Live Deployment](https://frontend-intern-assessment-ztaa.vercel.app/)
 
 ## GitHub Repository
 
