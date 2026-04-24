@@ -49,10 +49,10 @@ export default function Testimonials() {
           Testimonials
         </h2>
         
-      <div className="relative overflow-hidden">
+        <div className="relative overflow-hidden">
           <div 
             className="flex gap-6 transition-transform duration-300"
-            style={{ transform: `translateX(-${currentIndex * 340}px)` }}
+            style={{ transform: `translateX(-${scrollPosition}px)` }}
           >
             {testimonials.map((testimonial, idx) => (
               <div
@@ -69,15 +69,15 @@ export default function Testimonials() {
                     />
                   </div>
                   <div>
-                    <h3 className="text-[#151515] font-semibold text-[16px] leading-[150%] font-['Nunito_Sans']">
+                    <h3 className="text-[#151515] font-semibold text-[16px] leading-[150%] font-sans">
                       {testimonial.name}
                     </h3>
-                    <p className="text-[#696969] text-[14px] leading-[150%] font-normal font-['Nunito_Sans']">
+                    <p className="text-[#696969] text-[14px] leading-[150%] font-normal font-sans">
                       {testimonial.subtitle}
                     </p>
                   </div>
                 </div>
-                <p className="text-[#151515] text-[18px] leading-[150%] font-normal font-['Nunito_Sans']">
+                <p className="text-[#151515] text-[18px] leading-[150%] font-normal font-sans">
                   {testimonial.text}
                 </p>
               </div>
