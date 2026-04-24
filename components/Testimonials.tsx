@@ -57,7 +57,7 @@ export default function Testimonials() {
             {testimonials.map((testimonial, idx) => (
               <div
                 key={idx}
-                className="w-[calc(100vw-2rem)] sm:w-[350px] md:w-[400px] lg:w-[450px] bg-white border-l-4 border-[#EF4353] rounded-2xl p-6 flex-shrink-0"
+                className="w-[calc(100vw-2rem)] sm:w-[350px] md:w-[300px] lg:w-[450px] bg-white border-l-4 border-[#EF4353] rounded-2xl p-6 flex-shrink-0"
               >
                 <div className="flex items-center gap-4 mb-4">
                   <div className="relative w-11 h-11 rounded-full overflow-hidden">
