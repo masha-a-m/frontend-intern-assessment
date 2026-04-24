@@ -160,6 +160,7 @@ vercel --prod
 
 This project was developed with assistance from AI tools for:
 - Debugging assistance
+- README assistance
 
 ## Credits
 
