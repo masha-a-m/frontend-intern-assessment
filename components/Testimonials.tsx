@@ -49,43 +49,47 @@ export default function Testimonials() {
           Testimonials
         </h2>
         
-      <div className="relative overflow-hidden px-4 md:px-0">
-  <div 
-    className="flex gap-6 transition-transform duration-300 ease-out"
-    style={{ transform: `translateX(-${scrollPosition}px)` }}
-  >
-    {testimonials.map((testimonial, idx) => (
-      <div
-        key={idx}
-        className="w-[85vw] sm:w-[300px] md:w-[350px] lg:w-[380px] bg-white border-l-4 border-[#EF4353] rounded-2xl p-6 flex-shrink-0"
-      >
-        <div className="flex items-center gap-4 mb-4">
-          <div className="relative w-11 h-11 rounded-full overflow-hidden">
-            <Image
-              src={testimonial.image}
-              alt={`${testimonial.name} testimonial`}
-              fill
-              className="object-cover"
-            />
+      <div className="relative overflow-hidden">
+  {/* Container with max-width to show partial card */}
+  <div className="overflow-visible">
+    <div 
+      className="flex gap-6 transition-transform duration-300 ease-out"
+      style={{ transform: `translateX(-${scrollPosition}px)` }}
+    >
+      {testimonials.map((testimonial, idx) => (
+        <div
+          key={idx}
+          className="w-[85vw] sm:w-[320px] md:w-[350px] lg:w-[370px] xl:w-[400px] bg-white border-l-4 border-[#EF4353] rounded-2xl p-6 flex-shrink-0"
+        >
+          {/* Card content */}
+          <div className="flex items-center gap-4 mb-4">
+            <div className="relative w-11 h-11 rounded-full overflow-hidden">
+              <Image
+                src={testimonial.image}
+                alt={`${testimonial.name} testimonial`}
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div>
+              <h3 className="text-[#151515] font-semibold text-[16px] leading-[150%] font-sans">
+                {testimonial.name}
+              </h3>
+              <p className="text-[#696969] text-[14px] leading-[150%] font-normal font-sans">
+                {testimonial.subtitle}
+              </p>
+            </div>
           </div>
-          <div>
-            <h3 className="text-[#151515] font-semibold text-[16px] leading-[150%] font-sans">
-              {testimonial.name}
-            </h3>
-            <p className="text-[#696969] text-[14px] leading-[150%] font-normal font-sans">
-              {testimonial.subtitle}
-            </p>
-          </div>
+          <p className="text-[#151515] text-[16px] md:text-[18px] leading-[150%] font-normal font-sans">
+            {testimonial.text}
+          </p>
         </div>
-        <p className="text-[#151515] text-[16px] md:text-[18px] leading-[150%] font-normal font-sans">
-          {testimonial.text}
-        </p>
-      </div>
-    ))}
+      ))}
+    </div>
   </div>
   
   {/* Navigation Buttons */}
-  <div className="flex justify-end gap-3 mt-8">
+  <div className="flex justify-end gap-3 mt-8 mr-4 md:mr-0">
     <button
       onClick={prevTestimonial}
       className="w-8 h-8 bg-[#F043541A] rounded-lg flex items-center justify-center hover:bg-[#F0435433] transition-colors"
